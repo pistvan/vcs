@@ -222,6 +222,8 @@ abstract class AbstractSvn extends AbstractClient
         $retval.= '/' . ltrim($path->getPathname(), '/');
         $retval = rtrim($retval, '/');
 
+        if ($path->getRevision()) $retval .= '@' . $path->getRevision();
+
         return $retval;
     }
 

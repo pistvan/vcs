@@ -99,6 +99,11 @@ class VcsFileInfo
         return $this->reference->getName();
     }
 
+    public function getRevision()
+    {
+        return $this->reference->getRevision();
+    }
+
     public function __toString()
     {
         return $this->filename;
