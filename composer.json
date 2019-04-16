@@ -1,5 +1,5 @@
 {
-    "name": "webcreate/vcs",
+    "name": "pistvan/vcs",
     "type": "library",
     "keywords": ["vcs", "svn", "git", "versioncontrol", "subversion"],
     "description": "PHP interface for version control systems",
