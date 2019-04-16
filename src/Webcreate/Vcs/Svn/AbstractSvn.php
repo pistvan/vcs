@@ -197,7 +197,7 @@ abstract class AbstractSvn extends AbstractClient
         }
 
         if (is_string($path)) {
-            $path = new VcsFileInfo($path, array($head->getName(), $head->getType()));
+            $path = new VcsFileInfo($path, $head);
         }
 
         if ($path->inBranch()) {
@@ -222,7 +222,7 @@ abstract class AbstractSvn extends AbstractClient
         $retval.= '/' . ltrim($path->getPathname(), '/');
         $retval = rtrim($retval, '/');
 
-        if ($path->getRevision()) $retval .= '@' . $path->getRevision();
+        if ($head->getRevision()) $retval .= '@' . $head->getRevision();
 
         return $retval;
     }
