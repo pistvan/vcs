@@ -108,4 +108,8 @@ class VcsFileInfo
     {
         return $this->filename;
     }
+
+    public function getReference() {
+        return $this->reference;
+    }
 }

@@ -199,6 +199,7 @@ abstract class AbstractSvn extends AbstractClient
         if (is_string($path)) {
             $path = new VcsFileInfo($path, $head);
         }
+        $head = $path->getReference();
 
         if ($path->inBranch()) {
             $branchName = $path->getReferenceName();
