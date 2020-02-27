@@ -183,7 +183,7 @@ abstract class AbstractSvn extends AbstractClient
      * @param  string|VcsFileInfo $path
      * @return string
      */
-    public function getSvnUrl($path)
+    public function getSvnUrl($path = null)
     {
         $head = $this->head;
 
